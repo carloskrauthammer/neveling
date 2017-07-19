@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+        <title>Breadcrumb Menu</title>
+    </head>
+    <body>
+        <header id="main-header">
+            <h1>Atomic Liquor</h1>
+            <h2>Radioactive Cocktails and Cold Beer</h2>
+        </header>
+        <nav id="navbar">
+            <ul id="crumbs">
+                <li class="parent">
+                    <input type="checkbox" id="cb_1" />
+                    <label for="cb_1">Category</label>
+                    <div class="triangle"></div>
+                    <ul class="children">
+                        <li><a href="">Product 1</a></li>
+                        <li><a href="">Product 2</a></li>
+                        <li><a href="">Product 3</a></li>
+                        <li><a href="">Product 4</a></li>
+                        <li><a href="">Product 5</a></li>
+                        <li><a href="">Product 6</a></li>
+                    </ul>
+                </li>
+                <li class="parent">
+                    <input type="checkbox" id="cb_2" />
+                    <label for="cb_2">Assortment</label>
+                    <div class="triangle"></div>
+                    <ul class="children">
+                        <li><a href="">Product 1</a></li>
+                        <li><a href="">Product 2</a></li>
+                        <li><a href="">Product 3</a></li>
+                        <li><a href="">Product 4</a></li>
+                        <li><a href="">Product 5</a></li>
+                        <li><a href="">Product 6</a></li>
+                    </ul>
+                </li>
+                <li class="parent">
+                    <input type="checkbox" id="cb_3" />
+                    <label for="cb_3">Product Range</label>
+                    <ul class="children">
+                        <li><a href="">Product 1</a></li>
+                        <li><a href="">Product 2</a></li>
+                        <li><a href="">Product 3</a></li>
+                        <li><a href="">Product 4</a></li>
+                        <li><a href="">Product 5</a></li>
+                        <li><a href="">Product 6</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Meine Lösungen:</h1>
+            <p>Da kein Zeitlimit angegeben war, und zweieinhalb der vier Aufgaben Javascript zur Lösung erfordern, habe ich mir Zeit etwas Zeit gelassen, um mich in der vergangenen Woche wieder mit JS-Programmierung vertraut gemacht. Um die Sache einfacher zu gestalten, habe ich überhaupt kein Framework verwendet.</p>
+            <p>Damit ich die Elemente testen kann, habe ich dieser Seite ein einfaches Layout verpasst, welches ich jedoch nicht als Teil der Aufgaben betrachte, und deshalb sehr primitiv gehalten wurde. Dennoch ist es responsive. Ebenfalls könnte Dir auffallen, dass sämtliche Funktionalität dieser Seite erhalten bleibt, wenn man Javascript im Browser deaktiviert.</p>
+            <p>Das Markup habe ich so geschrieben, dass es sich problemlos anhand von Templates generieren lässt. Das Farbschema entspricht der Vorgabe aus der Crumbs-Aufgabe.</p>
+
+            <hr>
+
+            <h2>Das Breadcrumb Menü:</h2>
+            <p>Wie man erkennt, habe ich hier die Eigenschaft von <b>label</b>-Tags genutzt, einen Klick an die dazugehörigen Inputs weiter zu leiten. Im CSS wird, sobald eine Checkbox angeklickt wurde, das <b>max-height</b>-Attribut der darunter liegenden Liste über einen Selektor angepasst. Diese Liste enthält die Link-Elemente. Die relevanten CSS-Elemente findet man in der Datei <b>_crumbs.scss</b>.</p>
+
+            <hr>
+
+            <h2>Die Tab-Aufgabe:</h2>
+            <p>Nachdem ich nachlesen musste, was Tabs überhaupt sind - ich hätte sie als Box-Dinger mit einem Anzeigen-Schalter-Ding bezeichnet - habe ich sie zuerst als reines CSS implementiert, und damit den ersten Teil der Aufgabe gelöst:</p>
+
+            <div class="base-tab css-radio-tab">
+                <input type="radio" name="tab-name" id="tab-select_1" value="google" />
+                <label for="tab-select_1">google</label>
+                <input type="radio" name="tab-name" id="tab-select_2" value="facebook" />
+                <label for="tab-select_2">facebook</label>
+                <input type="radio" name="tab-name" id="tab-select_3" value="instagram" />
+                <label for="tab-select_3">instagram</label>
+                <section class="display-area">
+                    <section id="content-1" class="tab-content">
+                        <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                        <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    </section>
+                    <section id="content-2" class="tab-content">
+                        <p>bloblo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo  </p>
+                        <p>bloblo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo  </p>
+                    </section>
+                    <section id="content-3" class="tab-content">
+                        <p>blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu </p>
+                        <p>blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu </p>
+                    </section>
+                </section>
+            </div>
+
+            <p>Dummerweise fällt mir auf Anhieb kein Weg ein, wie man Labels über die Adressleiste selektieren kann, und es läuft darauf hinaus, dies mit Bookmark-Links zu erledigen:</p>
+
+            <div class="base-tab bookmark-tab">
+                <a href="#tab1" class="tablink" onClick="set_active_tablink(this)">google</a>
+                <a href="#tab2" class="tablink" onClick="set_active_tablink(this)">Facebook</a>
+                <a href="#tab3" class="tablink" onClick="set_active_tablink(this)">Instagram</a>
+                <section class="display-area">
+                    <section id="tab1" class="tab-content">
+                        <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                        <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    </section>
+                    <section id="tab2" class="tab-content">
+                        <p>bloblo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo  </p>
+                        <p>bloblo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo blo  </p>
+                    </section>
+                    <section id="tab3" class="tab-content">
+                        <p>blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu </p>
+                        <p>blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu </p>
+                    </section>
+                </section>
+            </div>
+
+            <p>Dieses Tab ist nun über die Adressleiste erreichbar. Wenn man auf die Links klickt, wird eine kleine JS-Funktion ausgeführt, welche dem angeklickten Link eine CSS Klasse hinzufügt, die dessen Style ändert.</p>
+            <p>Beim Laden der Seite wird diese Klasse jedoch nicht gesetzt, was einen kleinen Datstellungsfehler verursacht. Ein weiterer Darstellungsfehler kommt vor, wenn die Links auf einem zu kleinen Bildschirm angeklickt werden.</p>
+
+            <hr>
+
+            <h2>Die JSON-Aufgabe:</h2>
+            <p>Wenn Du nun noch die Javascript-Konsole öffnest, siehst Du, dass ein Array mit drei Objekten ausgegeben wird, die die in der Aufgabe spezifizierten Anforderung erfüllen. In der Datei <b>js/myscript.js</b> findest Du den dazugehörigen Code.</p>
+            <p>Ich denke, dass dieser Code die Aufgabe bestmöglich löst, möchte jedoch darauf hinweisen, dass dieser Umstand in erster Linie einem guten Referenzhandbuch zu verdanken ist.</p>
+        </main>
+        <script src="js/myscript.js"></script>
+        <script src="js/ministuff.js"></script>
+    </body>
+</html>

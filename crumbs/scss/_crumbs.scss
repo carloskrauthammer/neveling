@@ -1,0 +1,76 @@
+@import "colors";
+
+#navbar {
+    float: left;
+    margin: 0 2em 1em 0;
+    width: 200px;
+    font-size: 16px;
+    #crumbs {
+        ul {
+            li {
+                padding-left: 1em;
+            }
+        }
+        .parent {
+            position: relative;
+            background-color: $midgrey;
+            input[type="checkbox"] {
+                position: absolute;
+                opacity: 0;
+            }
+            input[type="checkbox"]:checked ~ .children {
+                max-height: 100vh;
+            }
+            input[type="checkbox"]:checked ~ label {
+                background-color: $lightgrey;
+                color: $midblue;
+            }
+            
+            input[type="checkbox"]:checked ~ .triangle {
+                background-color: $lightgrey;
+            }
+
+            label {
+                transition: all 0.5s ease;    
+                display: block;
+                line-height: 40px;
+                font-weight: bold;
+                color: $charcoal;
+                border-bottom: solid thin $darkgrey;
+                padding-left: 1em;
+            }
+            .triangle {
+                transition: all 0.5s ease;    
+                position: absolute;
+                transform: rotate(45deg);
+                background-color: $midgrey;
+                border-bottom: solid thin $darkgrey;
+                border-right: solid thin $darkgrey;
+                height: 15px;
+                width: 15px;
+                border-top: 0;
+                border-left: 0;
+                top: 33px;
+                left: 30px;
+                z-index: 10;
+            }
+            .children {
+                transition: all 0.5s ease;    
+                max-height: 0;
+                overflow: hidden;
+                li {
+                    background-color: white;
+                    border-bottom: solid thin $lightgrey;
+                    font-weight: 200;
+                    line-height: 40px;
+                    a {
+                        color: $charcoal;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

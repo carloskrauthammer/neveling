@@ -1,0 +1,150 @@
+@import "colors";
+
+.base-tab {
+    margin: 2em;
+    .display-area {
+        padding: 1em;
+        border: solid thin $lightgrey;
+        min-height: 5em;
+        max-width: 600px;
+        display: none;
+        .tab-content {
+            display: none;
+            overflow: hidden;
+        }
+    }
+}
+
+.css-radio-tab {
+    input[type="radio"] {
+        display: none;
+    }
+    input[type="radio"] + label {
+        color: $midgrey;
+        &:hover {
+            color: $darkgrey;
+        }
+    }
+    input[type="radio"]:checked + label {
+        position: relative;
+        bottom: -1px;
+        color: $charcoal;
+        background-color: white;
+        border: thin solid $lightgrey;
+        border-top: thick solid $lightgrey;
+        border-bottom: none;
+        z-index: 2;
+    }
+    #tab-select_1:checked ~ .display-area {
+        display: table;
+        > #content-1 {
+            display: block;
+            max-height: 500px;
+        }
+    }
+    #tab-select_2:checked ~ .display-area {
+        display: table;
+        > #content-2 {
+            display: block;
+            max-height: 500px;
+        }
+    }
+    #tab-select_3:checked ~ .display-area {
+        display: table;
+        > #content-3 {
+            display: block;
+            max-height: 500px;
+        }
+    }
+    label {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: bold;
+        padding: 0 10px;
+    }
+}
+
+.bookmark-tab {
+    .display-area {
+        display: block;
+    }
+    .tablink {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: bold;
+        padding: 0 10px;
+        color: $midgrey;
+        text-decoration: none;
+        &:hover {
+            color: $darkgrey;
+        }
+    }
+    .tablink-active {
+        position: relative;
+        bottom: -1px;
+        color: $charcoal;
+        background-color: white;
+        border: thin solid $lightgrey;
+        border-top: thick solid $lightgrey;
+        border-bottom: none;
+        z-index: 2;
+        &:hover {
+            color: $charcoal;
+        }
+    }
+    #tab1, #tab2, #tab3 {
+        display: none;
+    }
+    #tab1:target {
+        display: block;
+    }
+    #tab2:target {
+        display: block;
+    }
+    #tab3:target {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .base-tab {
+        margin: 2em 1em;
+        label, .tablink {
+            display: block;
+            border: thin solid $lightgrey;
+            border-top: none;
+            text-align: center;
+            &:first-of-type {
+                border-top: thin solid $lightgrey;
+            }
+            &:last-of-type {
+                //border-bottom: none;
+            }
+        }
+        .tablink {
+            bottom: 0;
+            border: thin solid $lightgrey;
+            border-top: none;
+            &:first-of-type {
+                border-top: thin solid $lightgrey;
+            }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+
+        input[type="radio"]:checked + label {
+            bottom: 0;
+            border: thin solid $lightgrey;
+            border-top: none;
+            &:first-of-type {
+                border-top: thin solid $lightgrey;
+            }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}

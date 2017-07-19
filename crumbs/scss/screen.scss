@@ -1,0 +1,98 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "colors";
+@import "tabs";
+@import "crumbs";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+b {
+    font-weight: bold;
+}
+pre {
+    font-family: monospace;
+    margin-left: 2em;
+}
+.unordered-list {
+    padding-left: 1em;
+    list-style-type: circle;
+    li {
+    }
+}
+
+#main-header {
+    min-height: 130px;
+    padding: 10px;
+    background-color: $midgrey;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: 30px 20px;
+    h1, h2 {
+        text-align: center;
+        margin-left: 250px;
+    }
+    h1 {
+        margin-bottom: 0.3em;
+    }
+    h2 {
+        margin-top: 0;
+        text-decoration: underline;
+    }
+}
+main {
+    max-width: 1300px;
+    margin-left: 250px;
+    padding: 2em;
+}
+@media only screen and (max-width: 768px) {
+    #main-header {
+        #main-logo {
+        }
+        h1, h2 {
+            margin-left: 150px;
+        }
+    }
+    #navbar {
+        float: none;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    main {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    #main-header {
+        #main-logo {
+            background-size: 30% auto;
+        }
+    }
+}

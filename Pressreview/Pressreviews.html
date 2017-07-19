@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Pressreview</title>
+
+
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/all.css" rel="stylesheet" />
+
+    <script src="js/libs/html5.js"></script>
+</head>
+<body>
+    <div style="margin: 1em auto; max-width: 800px;">
+        <h1 style="margin: 1em 0;">Ich habe das mal wie folgt gel&ouml;st:</h1>
+        <ul>
+            <li style="margin-bottom: 1em;">Klick auf den expand button erweitert <b>.press-reviews</b> auf 300px oder reduziert es auf den Ursprungswert, sofern die Klasse <b>expanded</b> gesetzt ist. Die genannte CSS-Klasse wird im JS getoggled.</li>
+            <li style="margin-bottom: 1em;">Klick auf die Down- oder Up-Buttons verschieben <b>slider.style.top</b> um 3/4 der H&ouml;he von <b>.press-reviews</b> in die gew&uuml;nschte Richtung. Ich andernfalls h&auml;tte ich auch vier einzelne Elemente mit <b>element.scrollIntoView()</b> herunter oder herauf scrollen k&ouml;nnen, fand das aber komplizierter als n&ouml;tig.</li>
+            <li style="margin-bottom: 1em;">Ist die Position von <b>.slider.style.top</b> am Anfang oder Ende angelangt, wird <b>button.style.display = 'none'</b> gesetzt.</li>
+            <li style="margin-bottom: 1em;">Animationen erfolgen ausschlie&szlig;lich &uumlber CSS, da dies Best-Practice ist. Auch, wenn es h&auml;sslich ist, habe ich die CSS-Transition am Ende des Skripts &uuml;ber das <b>document.onload</b>-Signal gesetzt. Ich h&auml;tte zwar auch eine neue CSS-Datei hinzuf&uuml;gen k&ouml;nnen, schlage stattdessen jedoch lieber vor, den bisherigen Webdesigner zu hauen. ;)</li>
+        </ul>
+        <hr style="margin: 1em;">
+    </div>
+
+    <section class="press-review-box" data-interval="6000">
+
+        <header>
+            <h1><a href="/">Beiersdorf Pressespiegel<span class="icon"></span></a></h1>
+            <div class="date">Heute 2013-02-04</div>
+            <div class="expand-button"></div>
+        </header>
+
+        <div class="press-reviews">
+            <div class="slider">
+                <article class="press-review">
+                    <a href="http://www.handelsblatt.com/themen/Beiersdorf%20AG">
+                        <span>
+                            <h1>1Handelsblatt</h1>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non ipsum ac lorem auctor malesuada. Etiam non ipsum ac lorem auctor malesuada.</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.wallstreet-online.de/nachricht/5076254-beiersdorf-hochgehebelter-unlimited-turbo-bull" title="Press Review">
+                        <span>
+                            <h1>2wallstreet:online</h1>
+                            <span>Nachfolgend wieder eine Szenarien Hebelzertifikate Vorstellung. Wer in den nächsten Tagen mit wieder steigenden Kursen in den Aktien von Beiersdorf rechnet, kann die erwartete Aufwärtsbewegung mit dem folgenden Zertifikat handeln</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.abendblatt.de/hamburg/article112338216/Zehn-neue-Produkte-von-Beiersdorf.html" title="Press Review">
+                        <span>
+                            <h1>3Abendblatt</h1>
+                            <span>Zehn neue Produkte von Beiersdorf</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.handelsblatt.com/themen/Beiersdorf%20AG">
+                        <span>
+                            <h1>4Handelsblatt</h1>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non ipsum ac lorem auctor malesuada.</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.wallstreet-online.de/nachricht/5076254-beiersdorf-hochgehebelter-unlimited-turbo-bull">
+                        <span>
+                            <h1>5wallstreet:online</h1>
+                            <span>Nachfolgend wieder eine Szenarien Hebelzertifikate Vorstellung. Wer in den nächsten Tagen mit wieder steigenden Kursen in den Aktien von Beiersdorf rechnet, kann die erwartete Aufwärtsbewegung mit dem folgenden Zertifikat handeln</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.abendblatt.de/hamburg/article112338216/Zehn-neue-Produkte-von-Beiersdorf.html">
+                        <span>
+                            <h1>6Abendblatt</h1>
+                            <span>Zehn neue Produkte von Beiersdorf</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.handelsblatt.com/themen/Beiersdorf%20AG">
+                        <span>
+                            <h1>7Handelsblatt</h1>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non ipsum ac lorem auctor malesuada.</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.wallstreet-online.de/nachricht/5076254-beiersdorf-hochgehebelter-unlimited-turbo-bull">
+                        <span>
+                            <h1>8wallstreet:online</h1>
+                            <span>Nachfolgend wieder eine Szenarien Hebelzertifikate Vorstellung. Wer in den nächsten Tagen mit wieder steigenden Kursen in den Aktien von Beiersdorf rechnet, kann die erwartete Aufwärtsbewegung mit dem folgenden Zertifikat handeln</span>
+                        </span>
+                    </a>
+                </article>
+                <article class="press-review">
+                    <a href="http://www.abendblatt.de/hamburg/article112338216/Zehn-neue-Produkte-von-Beiersdorf.html">
+                        <span>
+                            <h1>9Abendblatt</h1>
+                            <span>Zehn neue Produkte von Beiersdorf</span>
+                        </span>
+                    </a>
+                </article>
+            </div>
+        </div>
+
+        <footer>
+            <div class="up"></div>
+            <div class="down"></div>
+            <div class="clear"></div>
+        </footer>
+
+        <div class="shadow"></div>
+    </section>
+
+
+
+    <script src="js/libs/jquery-1.8.3.min.js"></script>
+    <script src="js/libs/modernizr.js"></script>
+
+    <script src="js/pressreview.js"></script>
+
+</body>
+</html>
